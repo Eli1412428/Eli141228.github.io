@@ -69,8 +69,8 @@ function showSongs(friend) {
         'Yeshua': {
             happy: 'Dear Maria, Count Me In',
             sad: 'Sagada',
-            happyVideo: 'path_to_happy_video.mp4', // Replace with actual video path
-            sadVideo: 'path_to_sad_video.mp4' // Replace with actual video path
+            happyVideo: 'snaptik_7396552370265541906.mp4', 
+            sadVideo: 'snaptik_7394411180678253831.mp4' 
         },
         'Jaspher': {
             happy: 'Bomba Honda',
@@ -209,8 +209,8 @@ function displaySong(friend, mood) {
         'Yeshua': {
             happy: 'Dear Maria, Count Me In',
             sad: 'Sagada',
-            happyVideo: 'path_to_happy_video.mp4', // Replace with actual video path
-            sadVideo: 'path_to_sad_video.mp4' // Replace with actual video path
+            happyVideo: 'snaptik_7396552370265541906.mp4',
+            sadVideo: 'snaptik_7394411180678253831.mp4' 
         },
         'Jaspher': {
             happy: 'Bomba Honda',
