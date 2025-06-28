@@ -100,11 +100,10 @@
     <div class="friend" style="background: linear-gradient(135deg, yellow, black);" onclick="showSongs('Jaspher')">Jaspher</div>
     <div class="friend" style="background-color: purple;" onclick="showSongs('Jenn')">Jenn</div>
     <div class="friend" style="background-color: gray;" onclick="showSongs('Lorelyn')">Lorelyn</div>
-    <div class="friend" style="background-color: purple;" onclick="showSongs('Adela')">Adela</div>
+    <div class="friend" style="background-color: pink;" onclick="showSongs('Ron')">Ron</div> <!-- Ron styled in pink -->
     
     <!-- Third Row -->
     <div class="friend diana-gradient" onclick="showSongs('Diana')">Diana</div> <!-- Diana with gradient -->
-     <div class="friend" style="background-color: pink;" onclick="showSongs('Ron')">Ron</div> <!-- Ron styled in pink -->
 </div>
 
 <div id="songDisplay" style="margin-top: 20px;"></div>
@@ -239,6 +238,9 @@
             <div id="${friend}-happy" class="happy"></div>
             <div id="${friend}-sad" class="sad"></div>
         `;
+
+        // Scroll to the song display area
+        songDisplay.scrollIntoView({ behavior: 'smooth' });
     }
 
     function displaySong(friend, mood) {
