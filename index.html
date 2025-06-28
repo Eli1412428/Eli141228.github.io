@@ -10,12 +10,13 @@
             text-align: center;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%); /* Midnight blue to dark blue */
             min-height: 100vh;
+            position: relative; /* For positioning the moon */
         }
         h1 {
             font-size: 2.5rem;
-            color: #333;
+            color: #fff; /* White text for better contrast */
             margin-bottom: 30px;
             animation: fadeIn 1s ease-in-out;
         }
@@ -64,9 +65,22 @@
         .diana-gradient {
             background: linear-gradient(135deg, #FF5733, #0077ff); /* Gradient from red to a shade of blue */
         }
+        .moon {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            width: 100px; /* Size of the moon */
+            height: 100px; /* Size of the moon */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Moon_and_Asteroids.jpg/800px-Moon_and_Asteroids.jpg'); /* Replace with your moon image */
+            background-size: cover;
+            border-radius: 50%; /* Make it circular */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
+        }
     </style>
 </head>
 <body>
+
+<div class="moon"></div> <!-- Full moon element -->
 
 <h1>MY FRIENDS FAVORITE SONG</h1>
 
