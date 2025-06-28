@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    min-height: 100vh;
+    position: relative;
+    color: #fff; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.friend {
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px;
+    width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: white; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.friend:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.happy, .sad {
+    display: none;
+    margin-top: 20px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+video {
+    width: 100%; 
+    max-width: 400px; 
+    aspect-ratio: 9 / 16;
+    border-radius: 12px; 
+    object-fit: cover; 
+}
+
+.landscape {
+    width: 400px; 
+    height: 225px;
+    aspect-ratio: 16 / 9;
+}
+
+.diana-gradient {
+    background: linear-gradient(135deg, #FF5733, #0077ff); /* Gradient from red to a shade of blue */
+}
+
+.moon {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    width: 100px; 
+    height: 100px; 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Moon_and_Asteroids.jpg/800px-Moon_and_Asteroids.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
