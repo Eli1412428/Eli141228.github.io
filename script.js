@@ -51,7 +51,7 @@ function showSongs(friend) {
         'Ezekiel': {
             happy: 'Your Universe',
             sad: 'The Man Who Can\'t Be Moved',
-            happyVideo: 'snaptik_7446956010893364488.mp4',
+            happyVideo: 'snaptik_7348769304134946053.mp4',
             sadVideo: 'snaptik_7270802094104317189.mp4'
         },
         'Ace': {
@@ -191,7 +191,7 @@ function displaySong(friend, mood) {
         'Ezekiel': {
             happy: 'Your Universe',
             sad: 'The Man Who Can\'t Be Moved',
-            happyVideo: 'snaptik_7446956010893364488.mp4',
+            happyVideo: 'snaptik_7348769304134946053.mp4',
             sadVideo: 'snaptik_7270802094104317189.mp4'
         },
         'Ace': {
