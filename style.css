@@ -3,16 +3,27 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
     min-height: 100vh;
     position: relative;
     color: #fff; 
+    overflow-x: hidden;
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     animation: fadeIn 1s ease-in-out;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-family: 'Segoe UI', 'Montserrat', 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-shadow: 0 6px 32px rgba(0,0,0,0.25), 0 1px 0 #fff2;
 }
 
 @keyframes fadeIn {
@@ -27,28 +38,44 @@ h1 {
     margin: 10px;
     width: 150px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1), background 0.3s;
     font-weight: 600;
     color: white; 
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', 'Montserrat', 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 1.2px;
 }
 
 .friend:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: rgba(0,119,255,0.18);
+    color: #ffeb3b;
+    box-shadow: 0 12px 32px 0 rgba(0,119,255,0.25);
+    transform: scale(1.07) translateY(-8px) rotate(-2deg);
 }
 
 .happy, .sad {
     display: none;
     margin-top: 20px;
     color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    animation: fadeIn 0.8s;
 }
 
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 video {
@@ -57,12 +84,64 @@ video {
     aspect-ratio: 9 / 16;
     border-radius: 12px; 
     object-fit: cover; 
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    border: 2px solid rgba(255,255,255,0.12);
+    transition: box-shadow 0.3s, border 0.3s;
 }
 
-.landscape {
-    width: 400px; 
-    height: 225px;
-    aspect-ratio: 16 / 9;
+video:hover {
+    box-shadow: 0 16px 48px 0 rgba(0,119,255,0.25);
+    border: 2px solid #0077ff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #0077ff 0%, #ffeb3b 100%);
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .friend {
+        width: 90vw;
+        font-size: 1.1rem;
+    }
+    video, .landscape {
+        max-width: 95vw;
+        width: 95vw;
+    }
+}
+
+/* Decorative floating shapes */
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    z-index: 0;
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite alternate;
+}
+.floating-shape.one {
+    width: 180px; height: 180px; left: 5vw; top: 10vh; background: #0077ff;
+    animation-delay: 0s;
+}
+.floating-shape.two {
+    width: 120px; height: 120px; right: 8vw; top: 30vh; background: #ffeb3b;
+    animation-delay: 2s;
+}
+.floating-shape.three {
+    width: 90px; height: 90px; left: 20vw; bottom: 8vh; background: #ff5733;
+    animation-delay: 4s;
+}
+@keyframes float {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-30px) scale(1.08); }
 }
 
 .diana-gradient {
@@ -78,5 +157,77 @@ video {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Moon_and_Asteroids.jpg/800px-Moon_and_Asteroids.jpg');
     background-size: cover;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* Blue-themed fire base animation styles for container harmony */
+.fire-base-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+.fire {
+    position: relative;
+    width: 80px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.flame {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 40% 40%;
+    opacity: 0.85;
+    animation: flame-flicker 1.2s infinite alternate;
+}
+.flame1 {
+    width: 40px; height: 70px;
+    background: radial-gradient(ellipse at center, #e3f0ff 0%, #4fc3ff 60%, #0077ff 100%);
+    box-shadow: 0 0 32px 8px #0077ff88;
+    z-index: 4;
+    animation-delay: 0s;
+}
+.flame2 {
+    width: 30px; height: 55px;
+    background: radial-gradient(ellipse at center, #e3f0ff 0%, #90caf9 60%, #1565c0 100%);
+    box-shadow: 0 0 24px 4px #2196f366;
+    z-index: 3;
+    animation-delay: 0.3s;
+}
+.flame3 {
+    width: 20px; height: 40px;
+    background: radial-gradient(ellipse at center, #e3f0ff 0%, #b3e5fc 60%, #4fc3ff 100%);
+    z-index: 2;
+    animation-delay: 0.6s;
+}
+.flame4 {
+    width: 15px; height: 25px;
+    background: radial-gradient(ellipse at center, #e3f0ff 0%, #81d4fa 60%, #00bcd4 100%);
+    z-index: 1;
+    animation-delay: 0.9s;
+}
+.base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 25px;
+    background: radial-gradient(ellipse at center, #003366 0%, #001f3f 100%);
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0 2px 12px 2px #0077ff99;
+}
+@keyframes flame-flicker {
+    0% { transform: translateX(-50%) scaleY(1) scaleX(1); opacity: 0.85; }
+    40% { transform: translateX(-50%) scaleY(1.08) scaleX(0.95); opacity: 1; }
+    60% { transform: translateX(-50%) scaleY(0.92) scaleX(1.05); opacity: 0.9; }
+    100% { transform: translateX(-50%) scaleY(1.1) scaleX(0.9); opacity: 0.8; }
 }
