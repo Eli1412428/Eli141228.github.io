@@ -25,9 +25,9 @@ function showSongs(friend) {
             sadVideo: 'snaptik_7361773813463321862.mp4'
         },
         'Jasselle': {
-            happy: 'End of Beginning',
+            happy: 'History by One Direction',
             sad: 'End of Beginning',
-            happyVideo: 'snaptik_7354603903960321285.mp4',
+            happyVideo: 'snaptik_7231025778832493850.mp4',
             sadVideo: 'snaptik_7354603903960321285.mp4'
         },
         'Jefferson': {
@@ -165,9 +165,9 @@ function displaySong(friend, mood) {
             sadVideo: 'snaptik_7361773813463321862.mp4'
         },
         'Jasselle': {
-            happy: 'End of Beginning',
+            happy: 'History by One Direction',
             sad: 'End of Beginning',
-            happyVideo: 'snaptik_7354603903960321285.mp4',
+            happyVideo: 'snaptik_7231025778832493850.mp4',
             sadVideo: 'snaptik_7354603903960321285.mp4'
         },
         'Jefferson': {
